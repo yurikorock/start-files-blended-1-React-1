@@ -1,3 +1,4 @@
+import { FormatDateToTransaction } from '../Helpers/FormatDateToNow';
 import style from './CryptoHistory.module.css';
 
 const CryptoHistory = ({ items }) => {
@@ -18,7 +19,7 @@ const CryptoHistory = ({ items }) => {
             <td className={style.td}>{index + 1}</td>
             <td className={style.td}>{price}</td>
             <td className={style.td}>{amount}</td>
-            <td className={style.td}>{date}</td>
+            <td className={style.td}>{FormatDateToTransaction(date)}</td>
           </tr>
         ))}
       </tbody>
